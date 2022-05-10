@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Car Details table</h1><hr/><hr/><br/><br/>
+<table border="2px">
+   <tr>
+       <th>CarName</th>
+       <th>Price</th>
+       <th>Ratings</th>
+       <th>Brand</th>
+       <th>Actions</th>
+   </tr>
+  {% for i in cars %}
+    <tr>
+       <td>{{i.CarName}}</td>
+       <td>{{i.Price}}</td>
+       <td>{{i.Ratings}}</td>
+       <td>{{i.Brand}}</td>
+
+
+            <td>
+                <a href="/edit/{{i.CarName}}">Edit</a> &nbsp  <a href="/delete/{{i.CarName}}"> Delete</a>
+            </td>
+    </tr>
+  {% endfor %}
+</table><br/><br/>
+<a href="/add new car"><button type="button">CREATE</button></a>
+</body>
+</html>
